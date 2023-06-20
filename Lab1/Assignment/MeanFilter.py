@@ -114,7 +114,7 @@ for x in range (k_size):
         gaussianKernel[x,y]= term*norm_const
         
         
-ker_sum = gaussianKernel.min()
+ker_sum = gaussianKernel.sum()
 
 #normalizing the filter so that the sum of the elements are equal to 1. 
 #if the sum >1 then image will get brighter after blurring,if sum<1 image will get darker. 

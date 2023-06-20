@@ -58,7 +58,7 @@ for x in range(3,bordered_img.shape[0]-1):
             a=s-m
             for t in range(kernel2.shape[1]):
                 b=t-m
-                sum+= bordered_img.item(x-a,y-a)*kernel2.item(s,t)
+                sum+= bordered_img.item(x-a,y-b)*kernel2.item(s,t)
         out[x-3,y-3]=sum
         
 
