@@ -79,6 +79,26 @@ m=img.shape[0]//2
 n=img.shape[1]//2
 
 
+print(point_list)
+k=len(point_list)
+while():
+    
+     y1=k[0]
+     x1=k[1]
+     dx=abs(x1-m)
+     dy=abs(y1-n)
+     if(x1<=m):
+        x2=m+dx
+     else:
+         x2=m-dx
+     if(y1<=n):
+         y2=n+dy
+     else:
+          y2=n-dy
+     point_list.append((x2,y2))
+
+print(point_list)
+
 for u in range(img.shape[0]):
     for v in range(img.shape[1]):
         
@@ -91,7 +111,7 @@ for u in range(img.shape[0]):
             if d1!=0 or d2!=0:
                notch[u][v]*=(1.0 / (1.0 + pow((d0 * d0) / (d1 * d2), order))) 
 
-
+cv2.imshow("notch",notch)
 
 # Inverse Fourier transform
 
