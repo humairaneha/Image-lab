@@ -61,7 +61,7 @@ for i in range (padding,bordered_img.shape[0]-padding):
                 diff = ip-iq
                 bilateral = kernel[x,y]*range_filter(sigma, diff)
                 sum_bilat+=bilateral
-                out[i-padding,j-padding]+= bordered_img[i,j]*bilateral
+                out[i-padding,j-padding]+= iq*bilateral
         
         out[i-padding,j-padding]/=sum_bilat
         out[i-padding,j-padding]/=255
